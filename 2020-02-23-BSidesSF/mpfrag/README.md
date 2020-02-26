@@ -16,5 +16,8 @@ And this password actually works almost fine for the ZIP.
 There are some errors but we managed to get the [output jpg](cloud_flag.jpg).
 The file seems to be broken somehow (perhaps the zip was not carved properly?) but we managed to open it anyway in some fancy image software. 
 
-It was only displaying the top half of the flag, but with our unprecedented guessing skills we managed to figure out the flag: `CTF{bridge_ext2_gaps}`
+It was only displaying the top half of the flag:  
+![flag\_cut.jpg](flag_cut.jpg)
+
+With our unprecedented guessing skills we managed to figure out the flag: `CTF{bridge_ext2_gaps}`
 
