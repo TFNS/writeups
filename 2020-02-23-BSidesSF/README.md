@@ -11,3 +11,4 @@ Team: XeR, SIben, BitK, SakiiR, shalom
 * [mpfrag (forensics)](mpfrag)
 * [toast clicker 1/2/3 (mobile)](toast)
 * [config-me (re)](config-me)
+* [ripc4 (pwn/crypto)](ripc4)
