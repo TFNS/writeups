@@ -10,3 +10,4 @@ Team: XeR, SIben, BitK, SakiiR, shalom
 * [haystack (crypto/forensics/re)](haystack)
 * [mpfrag (forensics)](mpfrag)
 * [toast clicker 1/2/3 (mobile)](toast)
+* [config-me (re)](config-me)
