@@ -1,4 +1,4 @@
-# wysinwyg (re, 537p, ? solved)
+# wysinwyg (re, 537p, 21 solved)
 
 We get yet another password checking [binary](wysinwyg).
 Another challenge where, similarly to `easy strcmp`, the binary seems to do something else than what it seems.

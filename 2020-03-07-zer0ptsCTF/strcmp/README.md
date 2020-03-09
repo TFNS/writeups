@@ -1,4 +1,4 @@
-# Easy strcmp (re, 265p, ? solved)
+# Easy strcmp (re, 265p, 57 solved)
 
 A classic password-checker RE problem.
 We get [a binary](easystrcmp) which checks flag for us.

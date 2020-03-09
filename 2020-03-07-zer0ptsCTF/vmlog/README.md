@@ -1,4 +1,4 @@
-# VM log (re, 213p, ? solved)
+# VM log (re, 213p, 68 solved)
 
 In the task we get a [simple vm code](vm.py) and [execution trace](log.txt).
 

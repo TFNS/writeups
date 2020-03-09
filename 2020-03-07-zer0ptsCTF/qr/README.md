@@ -1,4 +1,4 @@
-# QR Puzzle (re, 314p, ? solved)
+# QR Puzzle (re, 314p, 48 solved)
 
 In the challenge we get [encryption binary](chall), [encrypted qr code](encrypted.qr) and [key](key).
 

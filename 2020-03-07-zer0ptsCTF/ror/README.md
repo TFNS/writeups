@@ -1,4 +1,4 @@
-# ROR (crypto, 260p, ? solved)
+# ROR (crypto, 260p, 58 solved)
 
 In the task we get a short [encryption code](chall.py) and [results](chall.txt).
 
