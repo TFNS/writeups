@@ -9,3 +9,4 @@ Team: XeR, SIben, SakiiR, shalom
 * [Mental adventure: beginning (warmup/PIC)](mental_beginning)
 * [Mental adventure: call the orderlies (PIC)](mental_orderlies)
 * [Magic1 (crypto)](magic)
+* [Aerofloat (pwn)](aerofloat)
