@@ -5,6 +5,7 @@ Team: XeR, SIben, BitK, shalom
 ### Table of contents
 
 * [Locked kitkat (forensics)](locked)
+* [Dirty Laundry (crypto)](dirty-laundry)
 * [Nibelung (crypto)](nibelung)
 * [ROR (crypto)](ror)
 * [vmlog (re)](vmlog)
