@@ -1,4 +1,4 @@
-# Locked KitKat (forensics, 100p, ? solved)
+# Locked KitKat (forensics, 100p, 153 solved)
 
 Pretty nice and simple forensics challenge.
 We get image of Android device and we're supposed to extract the pattern lock.

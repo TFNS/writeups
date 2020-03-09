@@ -1,4 +1,4 @@
-# Hobbit (re, 525p, ? solved)
+# Hobbit (re, 525p, 22 solved)
 
 In the task we get a [kernel module](hobbit.ko) and a custom format [binary](chall.hbt).
 We also get all the rest of necessary setup to run this via qemu.
