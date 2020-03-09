@@ -1,4 +1,4 @@
-# Nibelung (crypto, 525p, ? solved)
+# Nibelung (crypto, 525p, 22 solved)
 
 A very interesting crypto challenge.
 We get [server code](server.py) and a [library](fglg.py) presumably implementing a FiniteGeneralLinearGroup.
