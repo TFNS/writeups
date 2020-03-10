@@ -10,3 +10,4 @@ Team: XeR, SIben, SakiiR, shalom
 * [Mental adventure: call the orderlies (PIC)](mental_orderlies)
 * [Magic1 (crypto)](magic)
 * [Aerofloat (pwn)](aerofloat)
+* [Shell Me If You Can (pwn/re)](shell_me)
