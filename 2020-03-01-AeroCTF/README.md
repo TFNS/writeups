@@ -14,3 +14,4 @@ Team: XeR, SIben, SakiiR, shalom
 * [Ticket Storage (pwn/re)](ticket_storage)
 * [Plane Market (pwn)](plane_market)
 * [Password Keeper (pwn)](password_keeper)
+* [Navigation Journal (pwn)](navigation_journal)
