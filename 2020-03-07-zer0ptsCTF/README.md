@@ -13,3 +13,4 @@ Team: XeR, SIben, BitK, shalom
 * [easy strcmp (re)](strcmp)
 * [wysinwyg (re)](wysinwyg)
 * [Hobbit (re)](hobbit)
+* [hipwn (pwn)](hipwn)
