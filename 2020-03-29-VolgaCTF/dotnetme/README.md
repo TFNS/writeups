@@ -285,6 +285,8 @@ The script outputs `!sfc-glZa-6|/z-~pNd-p3oK-kTss` which is valid against my scr
 
 Also work as a flag: `VolgaCTF{!sfc-glZa-6|/z-~pNd-p3oK-kTss}`
 
+You can find my sources in the [sources](./sources/) Directory.
+
 ```
  - @SakiiR
 
