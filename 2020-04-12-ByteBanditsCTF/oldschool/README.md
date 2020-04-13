@@ -20,7 +20,7 @@ We're now missing only one character, which we can brute-force/guess and we get 
 
 ## Part 2
 
-In this part we get some encoded data: `=]e7A=>F&G@TRAe@9#X>=>OH3:,6Kp:,6I.=F*;T>"1M.;+PJ<Al1]S` and information that the data were encoded twice, and `average was `74.5`.
+In this part we get some encoded data: `=]e7A=>F&G@TRAe@9#X>=>OH3:,6Kp:,6I.=F*;T>"1M.;+PJ<Al1]S` and information that the data were encoded twice, and `average` was `74.5`.
 Since it's twice and average is `74.5` then sum is `149`.
 We just looked at different `base` encodings with large enough numbers and `85+64` was a good match.
 Once we decode the data as base85 we get `YXIzX2ZAbWlsaUByX3cxN2hfN2gzXzBsZF93QHkkfQ==` and decoded as base64 we have: `ar3_f@mili@r_w17h_7h3_0ld_w@y$}`
