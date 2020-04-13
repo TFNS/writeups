@@ -1,0 +1,67 @@
+# Extra careful bank (crypto, 388p)
+
+In the task we get access to a service where we can perform some transactions.
+We start with 10$ and we can transfer money to people id 1,2 or 3.
+We can do 10 transactions.
+
+We decided to send 1$ 10 times to id 1.
+
+After that we get encrypted listing of all transactions:
+
+```
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+e31da8f33f04cdbf4bfe47bb4854d9761b9e83cfa59aaded8622edf9708db1e350699f75966d4214f5225205504dae0a
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+1b9e83cfa59aaded8622edf9708db1e38bb2ef93e02ef02c91796cc5c4bbaaf0c81f5f0d41e90baa026dd0ced320cabd
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+8bb2ef93e02ef02c91796cc5c4bbaaf0e31da8f33f04cdbf4bfe47bb4854d976376fa414b68f98cee51cda6c80517192
+8bb2ef93e02ef02c91796cc5c4bbaaf0e31da8f33f04cdbf4bfe47bb4854d9762cdc7ec92423edf1a807da5f296564ab
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+e31da8f33f04cdbf4bfe47bb4854d9761b9e83cfa59aaded8622edf9708db1e3e41108b58d05256fb242b3d5bc5a095c
+1b9e83cfa59aaded8622edf9708db1e3e31da8f33f04cdbf4bfe47bb4854d9765b4737538199cbfbc5b81f2868850830
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+e31da8f33f04cdbf4bfe47bb4854d9761b9e83cfa59aaded8622edf9708db1e3a162ae1d25723cbb5ee1140f5058f246
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+1b9e83cfa59aaded8622edf9708db1e3e31da8f33f04cdbf4bfe47bb4854d976e7c23e7bbb20d587ec9ff0b6b37b0010
+1b9e83cfa59aaded8622edf9708db1e38bb2ef93e02ef02c91796cc5c4bbaaf0f5fd11e1b188fa326c39bc7074df95e6
+8bb2ef93e02ef02c91796cc5c4bbaaf0e31da8f33f04cdbf4bfe47bb4854d9767306220c74dea23dd6988e22b8a73974
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+```
+
+Notice that we can see 10 times identical string:
+```
+10c69762f9c25ad18796a8b4ab211ee48bb2ef93e02ef02c91796cc5c4bbaaf07bd8d5142bdc54441fc18622c3c684cb
+```
+which is probably our ECB-encrypted transaction.
+
+After that we get to see one 500$ transaction:
+
+```
+1b9e83cfa59aaded8622edf9708db1e38bb2ef93e02ef02c91796cc5c4bbaaf0e7c1102a0aaff86a691f41f462694eaa
+```
+
+Finally we can submit 3 encrypted transactions to get processed, and our goal is to get 1500$.
+The system tells us that format of the payload is `sended_id, receiver_id, amount`.
+
+From this we can deduce that:
+
+```
+our id -> 10c69762f9c25ad18796a8b4ab211ee4
+id1 -> 1b9e83cfa59aaded8622edf9708db1e3
+id2 -> 8bb2ef93e02ef02c91796cc5c4bbaaf0
+id3 -> e31da8f33f04cdbf4bfe47bb4854d976
+500$ -> e7c1102a0aaff86a691f41f462694eaa
+```
+
+Therefore we simply forge 3 transactions, to get 500$ from 1,2,3:
+
+```
+1b9e83cfa59aaded8622edf9708db1e310c69762f9c25ad18796a8b4ab211ee4e7c1102a0aaff86a691f41f462694eaa
+8bb2ef93e02ef02c91796cc5c4bbaaf010c69762f9c25ad18796a8b4ab211ee4e7c1102a0aaff86a691f41f462694eaa
+e31da8f33f04cdbf4bfe47bb4854d97610c69762f9c25ad18796a8b4ab211ee4e7c1102a0aaff86a691f41f462694eaa
+```
+
+And get the flag: `flag{bank$_sh0uld_n07_us3_ECB}`
