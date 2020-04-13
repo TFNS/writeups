@@ -10,9 +10,9 @@ For this task, a very simple Python application and its source code is provided.
 
 The application let us register, login, submit a link and edit a single field "note" that will be displayed on `/profile`.
 
-The application code is pretty straightforward and allow us to insert markdown on our own profile page.
+The application code is pretty straightforward and allows us to insert markdown on our own profile page.
 
-The python code responsible of markdown rendering (md2html) is the following:
+The python code responsible for markdown rendering (md2html) is the following:
 
 ```python
 @app.route("/update_notes", methods=["POST"])
@@ -46,7 +46,7 @@ This will be rendered as:
 
 Then, I tried that on my profile page and it worked.
 
-This should be a good entrypoint to our exploitation steps.
+This should be a good entry point to our exploitation steps.
 
 ## Exploitation
 
@@ -74,7 +74,7 @@ async def main(url):
 
 First, he authenticates himself on the application, and then access the URL provided.
 
-Also, an other important thing to notice is that the `/login` endpoint accepts GET and hasn't any check on the HTTP verb used:
+Also, another important thing to notice is that the `/login` endpoint accepts GET and does not have any check on the HTTP verb used:
 
 ```python
 @app.route("/login", methods=["GET", "POST"]) # Accepts GET and POST
@@ -166,7 +166,7 @@ The following HTML page has been hosted on `sakiir.ovh` to perform the iframe th
       const c = document.getElementById("cframe");
 
       b.onload = () => {
-        // Third action, login as me and get redirected on my own /profile containing Javascript retriving the **aframe** content
+        // Third action, login as me and get redirected on my own /profile containing Javascript retrieving the **aframe** content
         c.src =
           "https://notes.web.byteband.it/login?username=SakiiR4&password=test";
       };
@@ -185,3 +185,5 @@ Everything's ready, we send the link to the admin via the `/visit_link` endpoint
 ```
 flag{ch41n_tHy_3Xploits_t0_w1n}
 ```
+
+- SakiiR
