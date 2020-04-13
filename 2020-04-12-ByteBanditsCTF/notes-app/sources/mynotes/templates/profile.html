@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="hero is-fullheight is-centered is-vcentered is-primary">
+	<div class="hero-head">
+		<nav class="navbar">
+			<div class="container">
+				<div class="navbar-brand">
+					<a href="/" class="navbar-item">
+						MyNotes
+					</a>
+				</div>
+				<div class="navbar-menu">
+					<div class="navbar-end">
+						<span class="navbar-item">
+							<a href="/logout" class="button is-primary is-inverted">
+								<span>Logout</span>
+							</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="hero-body columns is-centered has-text-centered">
+		<div class="column is-4">
+			<div class="title">
+				Howdy {{current_user.id}}!
+			</div>
+			<!-- so that user can write html -->
+			<p>	{{current_user.notes | safe}} </p>
+			<br/>
+			<form method="post" action="/update_notes">
+				<textarea class="textarea" name="notes" placeholder="Write something here"></textarea>
+				<input class="button is-fullwidth" type="submit" value="Update" name=""/>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
