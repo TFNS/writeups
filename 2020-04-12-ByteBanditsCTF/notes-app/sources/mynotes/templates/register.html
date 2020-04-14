@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="hero-body">
+	<div class="container has-text-centered">
+		<div class="column is-4 is-offset-4">
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			<div class="notification is-warning">
+				{{message}}
+			</div>
+			{% endfor %}
+			{% endif %}
+			{% endwith %}
+			<h3 class="title has-text-black">Sign Up</h3>
+			<hr class="login-hr">
+			<div class="box">
+				<form method="post">
+					<div class="field">
+						<div class="control">
+							<input class="input" type="text" name="username" placeholder="Your Username" autofocus="">
+						</div>
+					</div>
+
+					<div class="field">
+						<div class="control">
+							<input class="input" type="password" name="password" placeholder="Your Password">
+						</div>
+					</div>
+					<button class="button is-block is-info is-medium is-fullwidth">Register <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+				</form>
+			</div>
+			<p class="has-text-grey">
+				<a href="/login">Sign In</a>
+			</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
