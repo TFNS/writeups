@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="hero is-fullheight is-centered is-vcentered is-primary">
+	<div class="hero-head">
+		<nav class="navbar">
+			<div class="container">
+				<div class="navbar-brand">
+					<a href="/" class="navbar-item">
+						MyNotes
+					</a>
+				</div>
+				<div class="navbar-menu">
+					<div class="navbar-end">
+						<a href="/visit_link" class="navbar-item">
+							Send Link
+						</a>
+						<a href="/login" class="navbar-item">
+							Login
+						</a>
+						<span class="navbar-item">
+							<a href="/register" class="button is-primary is-inverted">
+								<span>Register</span>
+							</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="hero-body">
+		<div class="container">
+			<h1 class="title">
+				My Notes
+			</h1>
+			<h2 class="subtitle">
+				A secure place to jot down your thoughts
+				<h3>Start writing now</h3>
+			</h2>
+		</div>
+	</div>
+</div>	
+
+{% endblock %}

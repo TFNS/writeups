@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="hero-body">
+	<div class="container has-text-centered">
+		<div class="column is-4 is-offset-4">
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			<div class="notification is-warning">
+				{{message}}
+			</div>
+			{% endfor %}
+			{% endif %}
+			{% endwith %}
+			{% if job_id %}
+			<div class="notification is-success"> Visit <a href="/status?job_id={{job_id}}"> here </a> for status. </div>
+			{% endif %}
+			<h3 class="title has-text-black">Send Link</h3>
+			<hr class="login-hr">
+			<div class="box">
+				<form method="post">
+					<div class="field">
+						<div class="control">
+							<input class="input" type="text" name="url" placeholder="enter url to send" autofocus="">
+						</div>
+					</div>
+					<br></br>
+
+					<button class="button is-block is-info is-medium is-fullwidth">Send Link</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
