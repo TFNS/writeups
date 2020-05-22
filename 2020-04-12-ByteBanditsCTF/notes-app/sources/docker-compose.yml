@@ -1,0 +1,26 @@
+version: "3"
+services:
+  web:
+    build: .
+    command: gunicorn server:app -b '0.0.0.0:8000'
+    ports:
+      - "7002:8000"
+    volumes:
+      - .:/app
+    environment:
+      - ADMIN_PASS
+      - FLAG
+      - SQLALCHEMY_DATABASE_URI=sqlite:////tmp/test.db
+    depends_on:
+      - redis
+  worker:
+    build: .
+    command: rq worker -u 'redis://redis'
+    depends_on:
+      - redis
+    environment:
+      - ADMIN_PASS
+    volumes:
+      - .:/app
+  redis:
+    image: redis:alpine

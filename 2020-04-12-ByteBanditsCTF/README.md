@@ -13,3 +13,5 @@ Team: XeR, SakiiR, shalom
 * [Extra careful bank (crypto)](ecb)
 * [AESy (crypto)](aesy)
 * [string.equals(integer) (misc)](string_equals)
+* [wooter (re)](wooter)
+* [Notes App (web)](notes-app)
