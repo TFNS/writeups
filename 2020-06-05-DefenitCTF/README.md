@@ -8,3 +8,4 @@ Team: XeR, SIben, SakiiR, shalom
 * [MixMix (re)](mixmix)
 * [Simple SPN (crypto)](spn)
 * [Warmup (pwn)](warmup)
+* [Base64 encoder (pwn)](base64)
