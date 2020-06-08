@@ -12,3 +12,4 @@ Team: XeR, SIben, SakiiR, shalom
 * [Error Program (pwn)](error)
 * [Catchmouse (rev)](catchmouse)
 * [Fortune Cookie (web)](fortune_cookie)
+* [Child Encrypter(rev/crypto)](child_encrypter)
