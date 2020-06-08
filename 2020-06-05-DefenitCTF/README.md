@@ -11,3 +11,4 @@ Team: XeR, SIben, SakiiR, shalom
 * [Base64 encoder (pwn)](base64)
 * [Error Program (pwn)](error)
 * [Catchmouse (rev)](catchmouse)
+* [Fortune Cookie (web)](fortune_cookie)
