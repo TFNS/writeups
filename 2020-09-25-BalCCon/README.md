@@ -8,3 +8,4 @@ Team: BitK, XeR, SakiiR, shalom
 * [Do U Have Knowledge (crypto)](do_u_have_knowledge)
 * [Katherine (crypto)](Katherine)
 * [RaKeeJaPassRPC (crypto)](RaKeeJaPassRPC)
+* [Mindgames 1336 (pwn)](mindgames_1336)
