@@ -13,3 +13,4 @@ Team: BitK, XeR, SakiiR, shalom
 * [Mindgames 1338 (pwn)](mindgames_1338)
 * [heapmailer (pwn)](heapmailer)
 * [IoT Grill (pwn)](iot_grill)
+* [Turbo Blaise (rev)](turboblaise)
