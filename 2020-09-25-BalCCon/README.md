@@ -9,3 +9,4 @@ Team: BitK, XeR, SakiiR, shalom
 * [Katherine (crypto)](Katherine)
 * [RaKeeJaPassRPC (crypto)](RaKeeJaPassRPC)
 * [Mindgames 1336 (pwn)](mindgames_1336)
+* [Mindgames 1337 (pwn)](mindgames_1337)
