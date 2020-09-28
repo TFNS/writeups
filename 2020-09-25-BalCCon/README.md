@@ -10,3 +10,4 @@ Team: BitK, XeR, SakiiR, shalom
 * [RaKeeJaPassRPC (crypto)](RaKeeJaPassRPC)
 * [Mindgames 1336 (pwn)](mindgames_1336)
 * [Mindgames 1337 (pwn)](mindgames_1337)
+* [Mindgames 1338 (pwn)](mindgames_1338)
