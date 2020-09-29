@@ -14,3 +14,4 @@ Team: BitK, XeR, SakiiR, shalom
 * [heapmailer (pwn)](heapmailer)
 * [IoT Grill (pwn)](iot_grill)
 * [Turbo Blaise (rev)](turboblaise)
+* [shallweplayagame (rev)](shallweplayagame)
