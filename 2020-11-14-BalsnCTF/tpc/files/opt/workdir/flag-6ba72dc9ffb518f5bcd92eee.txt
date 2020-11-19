@@ -1,1 +1,0 @@
-BALSN{What_permissions_does_the_service_account_need}
