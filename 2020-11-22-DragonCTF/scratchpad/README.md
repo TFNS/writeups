@@ -105,6 +105,8 @@ http://scratchpad.hackable.software:3000/notes?q=abcd.* -> 404
 
 We can use the `object` tag in firefox to get an oracle and perform XSS Search if we are able to redirect the user on our own domain.
 
+[https://twitter.com/k33r0k/status/1247381548384518144](https://twitter.com/k33r0k/status/1247381548384518144)
+
 To perform a redirect with the in place CSP, we used the `meta` tag method:
 
 ```html
