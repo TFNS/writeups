@@ -135,6 +135,10 @@ const isLocal = (req) => {
 }
 ```
 
+after writing valid http request to log,
+
+We can transfer it to any host using ftp.
+
 ```python
 from websocket import create_connection
 import json, random
@@ -216,6 +220,3 @@ p.sendline('retr ' + channel_id)
 
 p.interactive()
 ```
-
-after writing valid http request to log,
-We can transfer it to any host using ftp.
