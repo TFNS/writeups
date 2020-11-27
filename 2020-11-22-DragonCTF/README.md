@@ -13,3 +13,4 @@ Team: BitK, Posix, SakiiR, Sebbb, Shalom, SIben, XeR, mastho
 * [AppArmor2 (Sandbox)](apparmor2)
 * [Look up the flag (Network)](lookup_the_flag)
 * [CoolNAME Checker (Network)](coolname_checker)
+* [babyshell (Miscellaneous)](babyshell)
