@@ -9,3 +9,4 @@ Team: BitK, Sebbb, Shalom, SIben, Posix, XeR
 * [House of CSY (pwn)](hoc)
 * [Flag Checker Revenge (reverse)](flag_checker)
 * [TuringMachineDiagram (reverse)](turing)
+* [NGSteg (misc)](ngsteg)
