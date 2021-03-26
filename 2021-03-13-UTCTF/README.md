@@ -20,3 +20,4 @@ Team: Sebbb, Shalom, Posix, XeR
 * [A bit weird(crypto)](a_bit)
 * [Sleeves(crypto)](sleeves)
 * [Chilly beef code(crypto)](cbc)
+* [Functional Programming (pwn)](functional)
