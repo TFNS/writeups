@@ -22,3 +22,4 @@ Team: Sebbb, Shalom, Posix, XeR
 * [Chilly beef code(crypto)](cbc)
 * [Functional Programming (pwn)](functional)
 * [Resolve (pwn)](resolve)
+* [Linker Machine Broke (pwn)](linker)
