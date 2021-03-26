@@ -21,3 +21,4 @@ Team: Sebbb, Shalom, Posix, XeR
 * [Sleeves(crypto)](sleeves)
 * [Chilly beef code(crypto)](cbc)
 * [Functional Programming (pwn)](functional)
+* [Resolve (pwn)](resolve)
