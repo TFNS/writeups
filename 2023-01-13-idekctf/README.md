@@ -7,3 +7,4 @@ Team: mastho, Shalom, XeR
 * [Sprinter (pwn)](sprinter)
 * [Relativity (pwn)](relativity)
 * [Weep (pwn)](weep)
+* [Sofire=good (pwn)](sofire)
