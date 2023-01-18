@@ -9,3 +9,4 @@ Team: mastho, Shalom, XeR
 * [Weep (pwn)](weep)
 * [Sofire=good (pwn)](sofire)
 * [Coroutine (pwn)](coroutine)
+* [MinkyMomo (pwn)](minkymomo)
