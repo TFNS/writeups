@@ -10,3 +10,4 @@ Team: mastho, Shalom, XeR
 * [Sofire=good (pwn)](sofire)
 * [Coroutine (pwn)](coroutine)
 * [MinkyMomo (pwn)](minkymomo)
+* [Cleithrophobia (crypto)](cleithrophobia)
