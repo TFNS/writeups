@@ -8,3 +8,4 @@ Team: BitK, erdnaxe, mastho, p4zuu, Sebbb, W00dy, XeR
 * [dhash (crypto)](dhash)
 * [Integral Communication (crypto)](integralcommunication)
 * [Memory (pwn)](memory)
+* [Serious Banking (pwn)](seriousbanking)
