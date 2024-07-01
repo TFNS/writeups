@@ -158,7 +158,7 @@ unsigned char huffman_table_len[] = {
       n += 512;
 ```
 
-This code use only 2 tables of 36 bytes to store the Huffman table, great!
+This code uses only 2 tables of 36 bytes to store the Huffman table, great!
 
 ## PIC16 compression code
 
